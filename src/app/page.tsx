@@ -4,6 +4,7 @@ import {
   Button,
   Code,
   HStack,
+  Heading,
   Stack,
   Text,
   chakra,
@@ -64,18 +65,16 @@ export default function Home() {
 
       <Box p={5} as={HStack}>
         <Text>
-          <Code p={2} color="gray">
-            <chakra.span color="orange">git </chakra.span>
+          <Code p={2} bg="purple.100">
+            <chakra.span color="red">git </chakra.span>
             <chakra.span color="blue">clone </chakra.span>
             https://github.com/anjalbinayak/nextjs-boilerplate.git
           </Code>
         </Text>
 
-        <Button onClick={handleCopy}>
-          Copy {hasCopied ? <FaCheck /> : <FaClipboard />}
+        <Button onClick={handleCopy} colorScheme="purple">
+          {hasCopied ? <FaCheck /> : <FaClipboard />}
         </Button>
-
-        <Button onClick={() => alert("asda")}>hii</Button>
       </Box>
 
       <Stack mb={5}>

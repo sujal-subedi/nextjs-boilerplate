@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button, Code, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Code, Stack, Text, chakra } from "@chakra-ui/react";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,7 +12,25 @@ export default function Home() {
       flexDir={"column"}
     >
       <Text mb={5} color="blue.500" fontSize={"2xl"} fontWeight={500}>
-        Hii from Nextjs Boilerplate
+        <chakra.span
+          color="white"
+          p={1}
+          borderRadius={5}
+          fontSize={"5xl"}
+          background={"black"}
+          mr={3}
+        >
+          Nextjs{" "}
+        </chakra.span>
+        <chakra.span
+          color="white"
+          p={1}
+          borderRadius={5}
+          fontSize={"5xl"}
+          background={"green.500"}
+        >
+          Boilerplate
+        </chakra.span>
       </Text>
 
       <Stack mb={5}>

@@ -1,13 +1,49 @@
 "use client";
-import { Box, Button } from '@chakra-ui/react'
-
+import { Box, Button, Code, Stack, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <Box>
-      Hii from Nextjs Boilerplate
+    <Box
+      display="flex"
+      justifyContent={"center"}
+      alignItems={"center"}
+      height="100%"
+      flexDir={"column"}
+    >
+      <Text mb={5} color="blue.500" fontSize={"2xl"} fontWeight={500}>
+        Hii from Nextjs Boilerplate
+      </Text>
 
-      <Button> ⭐ the repo</Button>
+      <Stack mb={5}>
+        <Text>
+          <Code>components</Code> --&gt; place all the components
+        </Text>
+
+        <Text>
+          <Code>constants</Code> --&gt; static image paths, routes, api routes,
+          magic numbers
+        </Text>
+
+        <Text>
+          <Code>helpers</Code> --&gt; project-specific functions (eg:
+          getPageRoute, getApiRoute)
+        </Text>
+
+        <Text>
+          <Code>utils</Code> --&gt; utility functions (eg: format date,
+          transform string)
+        </Text>
+        <Text>
+          <Code>theme</Code> --&gt; chakra theme configs
+        </Text>
+      </Stack>
+
+      <Button colorScheme="blue">
+        <Link href="https://github.com/anjalbinayak/nextjs-boilerplate">
+          ⭐ the repo
+        </Link>
+      </Button>
     </Box>
-  )
+  );
 }

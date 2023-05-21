@@ -1,7 +1,7 @@
 "use client";
 import { Box, Button, Code, Stack, Text, chakra } from "@chakra-ui/react";
 import Link from "next/link";
-
+import { FaFolder } from "react-icons/fa";
 export default function Home() {
   return (
     <Box

@@ -17,25 +17,23 @@ export default function Home() {
 
       <Stack mb={5}>
         <Text>
-          <Code>components</Code> --&gt; place all the components
-        </Text>
-
-        <Text>
-          <Code>constants</Code> --&gt; static image paths, routes, api routes,
-          magic numbers
-        </Text>
-
-        <Text>
-          <Code>helpers</Code> --&gt; project-specific functions (eg:
-          getPageRoute, getApiRoute)
-        </Text>
-
-        <Text>
-          <Code>utils</Code> --&gt; utility functions (eg: format date,
-          transform string)
+          <Code colorScheme="orange">utils</Code> --&gt; utility functions (eg:
+          format date, transform string)
         </Text>
         <Text>
-          <Code>theme</Code> --&gt; chakra theme configs
+          <Code colorScheme="red">theme</Code> --&gt; chakra theme configs
+        </Text>
+        <Text>
+          <Code colorScheme="blue">helpers</Code> --&gt; project-specific
+          functions (eg: getPageRoute, getApiRoute)
+        </Text>
+        <Text>
+          <Code colorScheme="purple">constants</Code> --&gt; static image paths,
+          routes, api routes, magic numbers
+        </Text>
+        <Text>
+          <Code colorScheme="green">components</Code> --&gt; place all the
+          components
         </Text>
       </Stack>
 

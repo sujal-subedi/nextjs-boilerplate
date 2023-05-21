@@ -1,11 +1,13 @@
 "use client";
-import { Box } from '@chakra-ui/react'
+import { Box, Button } from '@chakra-ui/react'
 
 
 export default function Home() {
   return (
     <Box>
       Hii from Nextjs Boilerplate
+
+      <Button> ⭐ the repo</Button>
     </Box>
   )
 }

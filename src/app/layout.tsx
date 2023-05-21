@@ -1,5 +1,7 @@
+"use client";
 import ThemeProvider from '@/theme/ThemeProvider'
 import './globals.css'
+import {  Container } from '@chakra-ui/react'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,8 +14,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-      <ThemeProvider>
-      {children}
-      </ThemeProvider>
+    <ThemeProvider>
+      <Container maxW="container.sm"  >
+
+        {children}
+      </Container>
+    </ThemeProvider>
   )
 }

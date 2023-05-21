@@ -1,8 +1,21 @@
 "use client";
-import { Box, Button, Code, Stack, Text, chakra } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Code,
+  HStack,
+  Stack,
+  Text,
+  VStack,
+  chakra,
+  useClipboard,
+} from "@chakra-ui/react";
 import Link from "next/link";
-import { FaFolder } from "react-icons/fa";
+import { FaClipboard, FaFolder } from "react-icons/fa";
 export default function Home() {
+  const { value, setValue } = useClipboard(
+    "git clone https://github.com/anjalbinayak/nextjs-boilerplate.git"
+  );
   return (
     <Box
       display="flex"
@@ -32,6 +45,19 @@ export default function Home() {
           Boilerplate
         </chakra.span>
       </Text>
+
+      <Box p={5} as={HStack}>
+        <Text>
+          <Code p={2} color="gray">
+            <chakra.span color="orange">git </chakra.span>
+            <chakra.span color="blue">clone </chakra.span>
+            https://github.com/anjalbinayak/nextjs-boilerplate.git
+          </Code>
+        </Text>
+        <Button>
+          <FaClipboard />
+        </Button>
+      </Box>
 
       <Stack mb={5}>
         <Text>

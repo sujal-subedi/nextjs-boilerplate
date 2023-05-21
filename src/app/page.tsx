@@ -6,16 +6,32 @@ import {
   HStack,
   Stack,
   Text,
-  VStack,
   chakra,
   useClipboard,
+  useToast,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { FaClipboard, FaFolder } from "react-icons/fa";
+import { useCallback } from "react";
+import { FaCheck, FaClipboard } from "react-icons/fa";
+
 export default function Home() {
-  const { value, setValue } = useClipboard(
+  const { hasCopied, onCopy } = useClipboard(
     "git clone https://github.com/anjalbinayak/nextjs-boilerplate.git"
   );
+
+  const toast = useToast();
+
+  const handleCopy = useCallback(() => {
+    toast({
+      title: "Copied to clipboard",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+
+      icon: <FaCheck />,
+    });
+    onCopy();
+  }, []);
   return (
     <Box
       display="flex"
@@ -54,9 +70,12 @@ export default function Home() {
             https://github.com/anjalbinayak/nextjs-boilerplate.git
           </Code>
         </Text>
-        <Button>
-          <FaClipboard />
+
+        <Button onClick={handleCopy}>
+          Copy {hasCopied ? <FaCheck /> : <FaClipboard />}
         </Button>
+
+        <Button onClick={() => alert("asda")}>hii</Button>
       </Box>
 
       <Stack mb={5}>

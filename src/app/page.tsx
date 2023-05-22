@@ -104,6 +104,9 @@ export default function Home() {
           ⭐ the repo
         </Link>
       </Button>
+      <Text mt={3} color="gray.500">
+        Feel free to send pull request
+      </Text>
     </Box>
   );
 }

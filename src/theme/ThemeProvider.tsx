@@ -3,7 +3,13 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./";
 
 const ThemeProvider = ({ children }: any) => {
-  return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
+  return (
+    <html lang="en">
+      <body>
+        <ChakraProvider theme={theme}>{children}</ChakraProvider>;
+      </body>
+    </html>
+  );
 };
 
 export default ThemeProvider;
